@@ -1,8 +1,0 @@
-RewriteEngine On
-# Redirige de no-www a www
-RewriteCond %{HTTP_HOST} ^dive-lovers\.com [NC]
-RewriteRule ^(.*)$ https://www.dive-lovers.com/$1 [L,R=301]
-
-# Asegura HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
