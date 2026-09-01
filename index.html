@@ -132,73 +132,162 @@
       </div>
     </section>
 
-    <section class="section momentum-section" id="technology">
-      <div class="section-heading reveal">
-        <div><span class="section-index">03</span><p class="kicker">Pellet stream & momentum transfer</p></div>
-        <h2>The pellet stream is a timed sequence of discrete masses configured to deliver momentum.</h2>
-        <p>Each impact transfers an impulse to the catcher. Repetition converts the individual events into an average force governed principally by pellet mass, relative impact speed and cadence.</p>
-      </div>
-      <div class="control-variables reveal">
-        <article><span>m</span><h3>Pellet mass</h3><p>Sets the momentum contribution of each projectile and may be varied through defined projectile families or geometry.</p></article>
-        <article><span>v</span><h3>Relative impact speed</h3><p>Determines impulse transfer and catcher loading. It must be distinguished from pellet speed in the launcher reference frame.</p></article>
-        <article><span>f</span><h3>Cadence · frequency</h3><p>Defines the rate at which the receiver encounters impulses and therefore contributes directly to average force.</p></article>
-      </div>
-      <div class="technical-note reveal">
-        <div><span class="status proposed">Control principle</span><h3>Launcher speed must adapt as the receiver accelerates.</h3></div>
-        <p>Source cadence and impact cadence diverge as receiver velocity increases. The control law must therefore adapt launch timing and pellet speed while keeping relative impact velocity within the catcher’s structural and thermal envelope.</p>
-      </div>
-    </section>
+	<section class="section momentum-section" id="technology">
+	  <div class="section-heading reveal">
+		<div>
+		  <span class="section-index">03</span>
+		  <p class="kicker">Mass stream & momentum transfer</p>
+		</div>
 
-    <section class="section tracking-section" id="tracking">
-      <div class="tracking-visual reveal">
-        <a class="image-link" href="assets/tracking-simulation.png" target="_blank" rel="noopener" aria-label="Open the complete active-tracking simulation image">
-          <img src="assets/tracking-simulation.png" alt="Project COELI adaptive-mission simulation with active receiver tracking enabled" width="1600" height="950">
-        </a>
-        <div class="tracking-legend"><span>Simulation output</span><span>Active tracking enabled</span></div>
-      </div>
-      <div class="tracking-copy reveal">
-        <span class="section-index">04</span>
-        <p class="kicker">Stability & stream tracking</p>
-        <h2>Emitter aiming establishes initial alignment; receiver tracking follows the measured stream axis.</h2>
-        <p>The architecture distinguishes pointing toward a predicted position from tracking the statistical centre of the stream that actually arrives. A future receiver would estimate that axis from the impact pattern or other sensors and apply corrections to remain centred.</p>
-        <div class="tracking-cards">
-          <article><span class="status demonstrated">Explored physically</span><h3>Passive geometry</h3><p>Prototype tests have examined catcher shape and geometric recentering elements.</p></article>
-          <article><span class="status simulated">Simulated</span><h3>Rotational stability</h3><p>The 3D model represents off-centre impacts, torque, centre-of-gravity placement and candidate gyroscopic stabilization.</p></article>
-          <article><span class="status proposed">Proposed</span><h3>Active tracking</h3><p>Future sensing and control would estimate the moving statistical axis and command receiver recentering.</p></article>
-        </div>
-      </div>
-    </section>
+		<h2>
+		  The mass stream is a timed sequence of discrete masses configured to deliver momentum.
+		</h2>
 
-    <section class="section simulation-section" id="simulation">
-      <div class="section-heading reveal">
-        <div><span class="section-index">05</span><p class="kicker">Simulation</p></div>
-        <h2>Simulation structures the experimental programme; it does not replace validation.</h2>
-        <p>The model is used to interpret observed catcher dynamics, compare stabilization strategies, identify sensitivities and define the measurements required for quantitative correlation.</p>
-      </div>
-      <figure class="wide-figure reveal">
-        <a class="image-link" href="assets/simulation.png" target="_blank" rel="noopener" aria-label="Open the complete three-dimensional simulation image">
-          <img src="assets/simulation.png" alt="Project COELI three-dimensional catcher dynamics simulator showing the receiver and its control parameters" width="1650" height="1050">
-        </a>
-        <figcaption><span>3D rigid-body simulator</span><span>Translation · rotation · impacts · dispersion · stabilization · tap to open full image</span></figcaption>
-      </figure>
-      <div class="simulation-grid reveal">
-        <article><span class="status simulated">Model includes</span><ul><li>Gravity and receiver translation</li><li>Rotation and off-centre impact torques</li><li>Restitution and tangential friction</li><li>Parameterized dispersion and atmosphere</li><li>Approximate collisions and adaptive timing</li></ul></article>
-        <article><span class="status target">Needs measured inputs</span><ul><li>Actual dispersion distributions</li><li>Impact geometry and restitution</li><li>Catcher vibration and deformation</li><li>Thermal distribution and wear</li><li>Wind, yaw, ablation and fragmentation</li></ul></article>
-      </div>
-      <div class="channel-card reveal">
-        <div><span class="status simulated">Simulated hypothesis</span><p class="kicker">Transitional channel</p></div>
-        <div><h3>Wake-mediated lateral concentration is a testable hypothesis.</h3><p>COELI examines whether the disturbed flow left by preceding projectiles could exert a restorative lateral influence on subsequent pellets. The effect has not been experimentally demonstrated, and current performance calculations assume no associated drag reduction.</p></div>
-        <div><span class="status target">Gate A test</span><p>Compare isolated shots, deliberately offset pairs and projectile trains across cadence and distance; measure dispersion, velocity loss and wake persistence.</p></div>
-      </div>
-      <details class="technical-disclosure reveal">
-        <summary>View documented simulation sensitivities <span>+</span></summary>
-        <div class="disclosure-body">
-          <p><span class="status simulated">Sensitivity—not flight prediction</span></p>
-          <p>A corrected longitudinal study used a 27 kg system, a 1 m catcher, 20 g projectiles, 100 Hz source cadence, a 2 km/s launch-speed ceiling and a 150 m/s relative-impact limit. It calculated 34.28 km apogee for one specified aerodynamic case and 79.65 km for an optimized case. Aerodynamics dominated after stability was controlled.</p>
-          <p>A separate reduced wake model evaluated lateral concentration at 200 m/s and 100 Hz. At 500 m it produced 60.00%, 14.47% and 3.11% reductions in standard dispersion for three assumed decay laws. The normalization is exploratory and must be measured; the result is neither CFD nor evidence of drag reduction.</p>
-        </div>
-      </details>
-    </section>
+		<p>
+		  Each impact transfers an impulse to the receiver. Repetition converts the individual events into an average force governed principally by mass, relative impact speed and cadence. As the receiver accelerates, source cadence and impact cadence diverge, so the control system must adapt launch timing and mass speed while keeping relative impact velocity within the receiver’s structural and thermal envelope.
+		</p>
+	  </div>
+
+	  <div class="control-variables reveal">
+		<article>
+		  <span>m</span>
+		  <h3>Mass</h3>
+		  <p>
+			Sets the momentum contribution of each discrete mass and may be varied through defined mass families or geometry.
+		  </p>
+		</article>
+
+		<article>
+		  <span>v</span>
+		  <h3>Relative impact speed</h3>
+		  <p>
+			Determines impulse transfer and receiver loading. It must be distinguished from mass speed in the launcher reference frame.
+		  </p>
+		</article>
+
+		<article>
+		  <span>f</span>
+		  <h3>Cadence · frequency</h3>
+		  <p>
+			Defines the rate at which the receiver encounters impulses and therefore contributes directly to average force.
+		  </p>
+		</article>
+	  </div>
+	</section>
+
+	<section class="section tracking-section" id="tracking">
+
+	  <div class="tracking-copy reveal">
+		<span class="section-index">04</span>
+		<p class="kicker">Stability & stream tracking</p>
+
+		<h2>
+		  The receiver does not require perfect targeting of every individual mass.
+		</h2>
+
+		<p>
+		  The architecture distinguishes initial aiming from continuous tracking of the stream that actually reaches the receiver. The emitter only needs to establish an initial trajectory close enough for the receiver to encounter the stream. From that point, the relevant reference is not the predicted position of each individual mass, but the statistical centre of the arriving stream.
+		</p>
+
+		<p>
+		  Passive receiver geometry can provide an initial restoring tendency when impacts occur away from the nominal axis. Rotational behaviour has also been explored in the 3D model, including off-centre impacts, torque and centre-of-gravity placement; the addition of gyroscopic stabilization produced stable behaviour under the simulated conditions examined.
+		</p>
+
+		<p>
+		  A future implementation could extend this principle through active tracking. By estimating the stream axis from the spatial and temporal distribution of impacts, or from complementary sensors, the receiver could apply small continuous corrections and remain centred without requiring the launcher to achieve perfect long-range accuracy for every individual mass.
+		</p>
+	  </div>
+
+	  <div class="tracking-visual reveal">
+		<a
+		  class="image-link"
+		  href="assets/tracking-simulation.png"
+		  target="_blank"
+		  rel="noopener"
+		  aria-label="Open the complete active-tracking simulation image"
+		>
+		  <img
+			src="assets/tracking-simulation.png"
+			alt="Project COELI simulation showing receiver stability and active stream tracking"
+			width="1600"
+			height="950"
+		  >
+		</a>
+
+		<div class="tracking-legend">
+		  <span>3D simulation</span>
+		  <span>Stream Tracking Enabled</span>
+		</div>
+	  </div>
+
+	</section>
+
+	<section class="section simulation-section" id="simulation">
+
+	  <div class="section-heading reveal">
+		<div>
+		  <span class="section-index">05</span>
+		  <p class="kicker">Simulation</p>
+		</div>
+
+		<h2>
+		  Simulation supports the experimental programme and the exploration of scaling scenarios.
+		</h2>
+
+		<div>
+		  <p>
+			A three-dimensional rigid-body model was developed to study the motion of the receiver under repeated impacts and to explore how the architecture behaves as its parameters change. The model represents gravity, translation and rotation of the receiver, off-centre impacts and the resulting torques, centre-of-gravity placement, restitution, tangential friction, projectile dispersion, atmospheric effects, approximate collisions, adaptive timing and candidate stabilization strategies including gyroscopic stabilization.
+		  </p>
+
+		  <p>
+			The simulator has been used to interpret the observed dynamics of the experimental receiver, compare stabilization strategies and identify the parameters that become increasingly important as the system scales. Quantitative correlation with future experiments will require measured distributions of stream dispersion, impact geometry and restitution, receiver vibration and deformation, thermal behaviour and wear, together with progressively more realistic representations of wind, yaw, ablation and fragmentation.
+		  </p>
+
+		  <p>
+			One longitudinal study examined a 27 kg system with a 1 m receiver, 20 g masses, a 100 Hz source cadence, a 2 km/s launch-speed ceiling and a 150 m/s relative-impact limit. Under the aerodynamic assumptions used in that study, the model produced an apogee of 34.28 km for one reference case and 79.65 km for an optimized case, showing the strong influence of aerodynamic performance once receiver stability is maintained.
+		  </p>
+		</div>
+	  </div>
+
+	  <figure class="wide-figure reveal">
+		<a
+		  class="image-link"
+		  href="assets/simulation.png"
+		  target="_blank"
+		  rel="noopener"
+		  aria-label="Open the complete three-dimensional simulation image"
+		>
+		  <img
+			src="assets/simulation.png"
+			alt="Project COELI three-dimensional rigid-body simulation of the receiver under repeated momentum-transfer impacts"
+			width="1650"
+			height="1050"
+		  >
+		</a>
+
+		<figcaption>
+		  <span>3D rigid-body simulator</span>
+		  <span>Translation · rotation · impacts · dispersion · stabilization</span>
+		</figcaption>
+	  </figure>
+
+	  <div class="simulation-narrative reveal">
+		<p class="kicker">Transitional channel</p>
+
+		<h3>
+		  The model has also been used to explore interaction between successive masses in the atmosphere.
+		</h3>
+
+		<p>
+		  One hypothesis considered by COELI is that preceding masses may temporarily modify the surrounding flow and influence the trajectory of those that follow. A reduced model was therefore used to explore whether such a transitional channel could produce a lateral concentrating effect on subsequent masses. The study considered a stream operating at 200 m/s and 100 Hz and examined different assumptions for the persistence and decay of the disturbed flow.
+		</p>
+
+		<p>
+		  At a distance of 500 m, the three assumed decay laws produced reductions in standard dispersion of 60.00%, 14.47% and 3.11% respectively. These results describe the behaviour of the reduced model under its assumed normalization and are intended to define an experimentally testable regime. The magnitude and persistence of the effect must ultimately be determined experimentally through measurements of projectile trains, deliberately offset pairs, dispersion, velocity loss and wake evolution.
+		</p>
+	  </div>
+
+	</section>
 
     <section class="section challenges-section" id="challenges">
       <div class="section-heading reveal">
@@ -215,28 +304,72 @@
       </div>
     </section>
 
-    <section class="section roadmap-section" id="roadmap">
-      <div class="roadmap-head reveal">
-        <div><span class="section-index">07</span><p class="kicker">Gate A · next experimental phase</p></div>
-        <span class="status target">Current target</span>
-      </div>
-      <div class="roadmap-hero reveal">
-        <div><strong>~100</strong><span>m/s</span></div>
-        <h2>A professional, modular and instrumented test bench.</h2>
-        <p>The current reduced Phase A plan defines approximately 100 m/s as the required integrated-bench milestone, with 200 m/s retained as a stretch objective. The scope preserves the measurements needed for a technically informed scale-up decision.</p>
-      </div>
-      <div class="roadmap-grid reveal">
-        <article><span class="status target">Target</span><h3>100 Hz injector</h3><p>Centred, timed and measured short bursts, initially dry or at low energy.</p></article>
-        <article><span class="status target">Target</span><h3>~100 m/s bench</h3><p>Safe, repeatable operation with a platform designed for later expansion.</p></article>
-        <article><span class="status target">Characterize</span><h3>Operating envelope</h3><p>Velocity, cadence, efficiency, angular dispersion and thermal behaviour.</p></article>
-        <article><span class="status target">Characterize</span><h3>Momentum transfer</h3><p>Impulse, rebound, vibration, receiver stability, heating and wear.</p></article>
-      </div>
-      <div class="why-100 reveal">
-        <h3>Why 100 m/s is a useful gate</h3>
-        <p>For the 5 g reference pellet, 100 m/s corresponds to 25 J of mechanical energy per pellet. At 100 Hz that is 2.5 kW mechanical during a burst; the reduced plan estimates approximately 25 kW electrical at 10% efficiency or 36 kW at 7%. This regime is high enough to force professional decisions on pulsed power, sensing, heat, repeatability and containment, while keeping a modular route toward 200 m/s and later 500–1,000 m/s.</p>
-      </div>
-      <div class="roadmap-note reveal"><strong>Roadmap update</strong><p>The final SPRIND master application dated 27 August 2026 described ~200 m/s as the Phase A reference. A later reduced-scope plan dated 28 August 2026 changed the mandatory milestone to ~100 m/s and retained 200 m/s as a stretch target. This site follows the later plan.</p></div>
-    </section>
+	<section class="section roadmap-section" id="roadmap">
+
+	  <div class="roadmap-head reveal">
+		<div>
+		  <span class="section-index">07</span>
+		  <p class="kicker">Gate A · next experimental phase</p>
+		</div>
+		<span class="status target">Current target</span>
+	  </div>
+
+	  <div class="roadmap-hero reveal">
+		<div>
+		  <strong>~100</strong>
+		  <span>m/s</span>
+		</div>
+
+		<h2>
+		  A professional, modular and instrumented test bench.
+		</h2>
+
+		<p>
+		  Gate A is designed to move the concept from a founder-built laboratory demonstrator to a professionally engineered experimental platform. The integrated target is approximately 100 m/s, together with a 100 Hz injector operating in controlled short bursts and the instrumentation required to characterize the complete system.
+		</p>
+
+		<p>
+		  This velocity is sufficient to force the main engineering questions that matter for subsequent scaling. For a 5 g reference mass, 100 m/s corresponds to 25 J of mechanical energy per shot; at 100 Hz, the instantaneous mechanical power during a burst reaches 2.5 kW. At realistic electromagnetic efficiencies, this moves the system into a regime where pulsed power, switching, thermal behaviour, timing accuracy, repeatability, containment and professional metrology must all be addressed quantitatively.
+		</p>
+	  </div>
+
+	  <div class="roadmap-grid reveal">
+
+		<article>
+		  <span class="status target">Target</span>
+		  <h3>100 Hz injector</h3>
+		  <p>
+			Centred, timed and measured short bursts with controlled projectile delivery.
+		  </p>
+		</article>
+
+		<article>
+		  <span class="status target">Target</span>
+		  <h3>~100 m/s bench</h3>
+		  <p>
+			Safe and repeatable integrated operation on a modular platform designed for later scaling.
+		  </p>
+		</article>
+
+		<article>
+		  <span class="status target">Characterize</span>
+		  <h3>Operating envelope</h3>
+		  <p>
+			Velocity, cadence, efficiency, angular dispersion, electrical behaviour and thermal response.
+		  </p>
+		</article>
+
+		<article>
+		  <span class="status target">Characterize</span>
+		  <h3>Momentum transfer</h3>
+		  <p>
+			Impulse, rebound, vibration, receiver stability, heating and wear under repeated impacts.
+		  </p>
+		</article>
+
+	  </div>
+
+	</section>
 
     <section class="section applications-section" id="applications">
       <div class="section-heading reveal">
