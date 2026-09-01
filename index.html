@@ -11,11 +11,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Project COELI">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script src="script.js?v=3" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="Project COELI home">
       <span class="brand-mark" aria-hidden="true"><i></i></span>
@@ -43,11 +44,6 @@
           <a class="button primary" href="#video">Watch prototype video <span aria-hidden="true">↗</span></a>
           <a class="button secondary" href="#concept">Explore the technology</a>
         </div>
-        <dl class="hero-stats" aria-label="Current prototype evidence">
-          <div><dt>7</dt><dd>electromagnetic stages</dd></div>
-          <div><dt>8–9 m/s</dt><dd>measured pellet speed</dd></div>
-          <div><dt>~15 Hz</dt><dd>typical test cadence</dd></div>
-        </dl>
       </div>
 
       <div class="hero-media reveal" id="video">
@@ -59,17 +55,6 @@
       </div>
     </section>
 
-    <section class="evidence-strip" aria-label="Evidence status">
-      <p>Evidence is labelled throughout this site:</p>
-      <div class="status-key">
-        <span class="status demonstrated">Demonstrated</span>
-        <span class="status measured">Measured</span>
-        <span class="status simulated">Simulated</span>
-        <span class="status proposed">Proposed</span>
-        <span class="status target">Target</span>
-      </div>
-    </section>
-
     <section class="chapter-nav" aria-labelledby="chapters-title">
       <div class="chapter-nav-head">
         <p class="kicker">Technical presentation</p>
@@ -78,105 +63,78 @@
       <div class="chapter-grid">
         <a href="#concept"><span>01</span><strong>Concept</strong><small>External momentum transfer</small></a>
         <a href="#evidence"><span>02</span><strong>Prototype & results</strong><small>Physical evidence</small></a>
-        <a href="#accelerator"><span>03</span><strong>Accelerator</strong><small>Seven-stage architecture</small></a>
+        <a href="#technology"><span>03</span><strong>Momentum transfer</strong><small>Mass · velocity · cadence</small></a>
         <a href="#tracking"><span>04</span><strong>Stability & tracking</strong><small>Keeping the stream centred</small></a>
         <a href="#simulation"><span>05</span><strong>Simulation</strong><small>Dynamics and sensitivity</small></a>
         <a href="#challenges"><span>06</span><strong>Technical challenges</strong><small>What remains unresolved</small></a>
         <a href="#roadmap"><span>07</span><strong>Gate A</strong><small>Next experimental phase</small></a>
         <a href="#applications"><span>08</span><strong>Applications</strong><small>Earth to Solar System</small></a>
+        <a href="#ip"><span>09</span><strong>Intellectual property</strong><small>Filed applications</small></a>
+        <a href="#team"><span>10</span><strong>Founder / team</strong><small>Project leadership</small></a>
       </div>
     </section>
 
     <section class="section intro-section" id="concept">
       <div class="section-heading reveal">
-        <div><span class="section-index">01</span><p class="kicker">Concept</p></div>
+        <div>
+          <span class="section-index">01</span>
+          <p class="kicker">Concept</p>
+        </div>
         <h2>External infrastructure supplies momentum progressively through a regulated stream of discrete masses.</h2>
-        <p>Each pellet transfers linear momentum to a separate catcher. Accumulating those impulses produces an average force that can be regulated through projectile mass, relative impact speed and cadence.</p>
+        <p>Each mass transfers linear momentum to a separate receiver. Successive impacts accumulate into a sustained force whose magnitude can be regulated through the mass of each projectile, its relative impact velocity and the cadence of the stream. The energy source, power electronics and accelerator remain in the external installation, allowing momentum delivery to continue while the receiver is already in motion.</p>
       </div>
-      <div class="principle-flow reveal" role="img" aria-label="Fixed infrastructure accelerates a pellet stream that transfers momentum to a separate receiver">
-        <div class="flow-node"><span>01</span><strong>Fixed infrastructure</strong><small>Energy · control · accelerator</small></div>
-        <div class="flow-line" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="flow-node"><span>02</span><strong>Pellet stream</strong><small>Mass · speed · cadence</small></div>
-        <div class="flow-line" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="flow-node accent"><span>03</span><strong>Receiver</strong><small>Cumulative momentum transfer</small></div>
-      </div>
-      <div class="formula-card reveal">
-        <span class="status demonstrated">Demonstrated principle</span>
-        <p class="formula">Average force ≈ cadence × impulse per impact</p>
-        <p>Rockets carry their propulsion system and unused propellant during ascent. Single-impulse launchers cease accelerating the payload when it leaves the installation. COELI instead studies continued external momentum delivery while the receiver is already in motion.</p>
-      </div>
+
+      <figure class="wide-figure reveal">
+        <img src="assets/idea.png" alt="Project COELI external momentum-transfer concept">
+      </figure>
     </section>
 
     <section class="section prototype-preview" id="evidence">
-      <div class="image-panel reveal">
-        <a class="image-link" href="assets/prototype.jpg" target="_blank" rel="noopener" aria-label="Open the complete prototype photograph">
-          <img src="assets/prototype.jpg" alt="The seven-stage Project COELI laboratory demonstrator with its control computer, electronics and receiver" width="2048" height="1122">
-        </a>
-        <div class="image-caption"><span>Physical hardware</span><span>Founder-built laboratory demonstrator</span></div>
+      <div class="prototype-visual reveal">
+        <div class="prototype-section-heading">
+          <span class="section-index">02</span>
+          <p class="kicker">Prototype & results</p>
+        </div>
+
+        <div class="image-panel">
+          <a class="image-link" href="assets/prototype.jpg" target="_blank" rel="noopener" aria-label="Open the complete prototype photograph">
+            <img src="assets/prototype.jpg" alt="The seven-stage Project COELI laboratory demonstrator with its control computer, electronics and receiver" width="2048" height="1122">
+          </a>
+          <div class="image-caption">
+            <span>Physical hardware</span>
+            <span>Founder-built laboratory demonstrator</span>
+          </div>
+        </div>
       </div>
+
       <div class="prototype-copy reveal">
-        <span class="status demonstrated">Hardware exists</span>
         <p class="kicker">Existing prototype</p>
         <h2>The laboratory demonstrator integrates the complete functional chain.</h2>
-        <p>The founder-built rig combines projectile injection, seven electromagnetic acceleration stages, power electronics, optical sensing, C/C++ control on Arduino, speed measurement, repeated impacts and a lightweight catcher in a single experimental system.</p>
-        <div class="result-row">
-          <strong>~4.5 s</strong>
-          <span>Best clean levitation sequence reported in the SPRIND application.</span>
+        <p>The prototype verified the integrated operation of the main elements required by the architecture: pellet injection, sequential electromagnetic acceleration, power electronics, optical detection and timing, velocity measurement, repeated momentum transfer and stable levitation of the receiver. Integrated tests were typically operated at around 15 Hz, while the injector independently demonstrated stable operation at 20 Hz. The system therefore provided a complete laboratory-scale implementation of the functional chain, from controlled mass injection to momentum transfer at the receiver.</p>
+      </div>
+
+      <div class="injector-block reveal">
+        <figure class="injector-figure">
+          <img src="assets/injector.jpg" alt="Physical projectile injector used in the Project COELI laboratory prototype">
+          <figcaption>Prototype injector · experimental implementation</figcaption>
+        </figure>
+
+        <div class="injector-copy">
+          <p class="kicker">Prototype injector</p>
+          <h3>Gravity feeding and a two-coil piston provide controlled projectile injection.</h3>
+
+          <p>In the concept used in the prototype, the projectiles advance to an intersection through a curved duct coupled to a vertical extension, forming a column of spherical projectiles approximately 20 cm high. A first sensor confirms that a projectile is loaded.</p>
+
+          <p>A vertical piston actuated by two coils performs an upward-and-return cycle. During the upward stroke, it drives the projectile into the output duct; during the return stroke, it resets the chamber for the next event. Two end-of-stroke sensors verify the upper and lower piston positions, allowing the control system to confirm that the cycle has been completed before authorizing the next projectile.</p>
+
+          <p>Projectile entry into the piston channel occurs by gravity. This configuration is one experimental implementation of the injection principle and is not intended as a final design.</p>
         </div>
-        <p class="caveat">These results were obtained by the founder with laboratory instrumentation. Professional metrology, uncertainty quantification and independent validation remain explicit objectives of the next phase.</p>
       </div>
-    </section>
-
-    <section class="section results-section" aria-labelledby="results-title">
-      <div class="section-heading reveal">
-        <div><span class="section-index">03</span><p class="kicker">Experimental results</p></div>
-        <h2 id="results-title">Laboratory-scale evidence with explicit validation limits.</h2>
-        <p>The current rig verifies injection, staged acceleration, measurement, repeated impact and temporary levitation as an integrated chain. It does not validate high-speed operation, long-range collimation or a flight-scale system.</p>
-      </div>
-      <div class="metrics-grid reveal">
-        <article><span class="status measured">Measured</span><strong>8–9<small> m/s</small></strong><p>Projectile speed recorded in the integrated demonstrator.</p></article>
-        <article><span class="status measured">Measured</span><strong>~15<small> Hz</small></strong><p>Typical integrated-test cadence using approximately 3 g steel pellets.</p></article>
-        <article><span class="status demonstrated">Demonstrated</span><strong>3–5<small> s</small></strong><p>Observed hovering episodes; the best clean sequence lasted approximately 4.5 s.</p></article>
-        <article><span class="status measured">Measured</span><strong>20<small> Hz</small></strong><p>Stable cadence demonstrated by the injector when tested separately.</p></article>
-      </div>
-      <div class="evidence-matrix reveal">
-        <article>
-          <span class="status demonstrated">Physically demonstrated</span>
-          <ul><li>Projectile feeding and injection</li><li>Seven-stage electromagnetic acceleration</li><li>Optical detection and speed measurement</li><li>Repeated impacts and brief levitation</li></ul>
-        </article>
-        <article>
-          <span class="status simulated">Simulated / explored</span>
-          <ul><li>Rigid-body translation and rotation</li><li>Off-centre impacts and catcher stability</li><li>Atmosphere, drag and timing sensitivity</li><li>Candidate wake and tracking strategies</li></ul>
-        </article>
-        <article>
-          <span class="status target">Not yet demonstrated</span>
-          <ul><li>~100 m/s professional bench</li><li>100 Hz injection in short bursts</li><li>Long-range stream collimation</li><li>Flight-scale momentum transfer</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section split-section" id="accelerator">
-      <div class="split-copy reveal">
-        <span class="section-index">04</span>
-        <p class="kicker">Electromagnetic accelerator</p>
-        <h2>Seven sequential stages accelerate each pellet under sensor-based timing control.</h2>
-        <p>Optical sensors register pellet passage, the control system coordinates coil activation, and recorded events make the acceleration sequence temporally traceable. The professional architecture will extend this principle with local measurement of energy, temperature and switching behaviour.</p>
-        <ol class="number-list">
-          <li><span>01</span><div><strong>Inject</strong><p>Introduce one pellet with a defined position and launch time.</p></div></li>
-          <li><span>02</span><div><strong>Detect</strong><p>Use optical barriers to register actual passage instead of relying solely on predetermined delays.</p></div></li>
-          <li><span>03</span><div><strong>Accelerate</strong><p>Activate successive coils according to the measured pellet trajectory.</p></div></li>
-          <li><span>04</span><div><strong>Measure</strong><p>Record speed and event timing before the pellet enters the free stream.</p></div></li>
-        </ol>
-      </div>
-      <figure class="portrait-figure reveal">
-        <img src="assets/injector.jpg" alt="The physical pellet injector used in the Project COELI prototype" width="405" height="706">
-        <figcaption>Prototype injector. This is an experimental implementation, not a final design.</figcaption>
-      </figure>
     </section>
 
     <section class="section momentum-section" id="technology">
       <div class="section-heading reveal">
-        <div><span class="section-index">05</span><p class="kicker">Pellet stream & momentum transfer</p></div>
+        <div><span class="section-index">03</span><p class="kicker">Pellet stream & momentum transfer</p></div>
         <h2>The pellet stream is a timed sequence of discrete masses configured to deliver momentum.</h2>
         <p>Each impact transfers an impulse to the catcher. Repetition converts the individual events into an average force governed principally by pellet mass, relative impact speed and cadence.</p>
       </div>
@@ -199,7 +157,7 @@
         <div class="tracking-legend"><span>Simulation output</span><span>Active tracking enabled</span></div>
       </div>
       <div class="tracking-copy reveal">
-        <span class="section-index">06</span>
+        <span class="section-index">04</span>
         <p class="kicker">Stability & stream tracking</p>
         <h2>Emitter aiming establishes initial alignment; receiver tracking follows the measured stream axis.</h2>
         <p>The architecture distinguishes pointing toward a predicted position from tracking the statistical centre of the stream that actually arrives. A future receiver would estimate that axis from the impact pattern or other sensors and apply corrections to remain centred.</p>
@@ -213,7 +171,7 @@
 
     <section class="section simulation-section" id="simulation">
       <div class="section-heading reveal">
-        <div><span class="section-index">07</span><p class="kicker">Simulation</p></div>
+        <div><span class="section-index">05</span><p class="kicker">Simulation</p></div>
         <h2>Simulation structures the experimental programme; it does not replace validation.</h2>
         <p>The model is used to interpret observed catcher dynamics, compare stabilization strategies, identify sensitivities and define the measurements required for quantitative correlation.</p>
       </div>
@@ -244,7 +202,7 @@
 
     <section class="section challenges-section" id="challenges">
       <div class="section-heading reveal">
-        <div><span class="section-index">08</span><p class="kicker">Current technical challenges</p></div>
+        <div><span class="section-index">06</span><p class="kicker">Current technical challenges</p></div>
         <h2>Two coupled scaling constraints govern the architecture’s technical viability.</h2>
         <p>The immediate programme must determine whether useful projectile speed can be repeated at operational cadence and whether angular dispersion can remain controllable as distance increases.</p>
       </div>
@@ -259,7 +217,7 @@
 
     <section class="section roadmap-section" id="roadmap">
       <div class="roadmap-head reveal">
-        <div><span class="section-index">09</span><p class="kicker">Gate A · next experimental phase</p></div>
+        <div><span class="section-index">07</span><p class="kicker">Gate A · next experimental phase</p></div>
         <span class="status target">Current target</span>
       </div>
       <div class="roadmap-hero reveal">
@@ -282,7 +240,7 @@
 
     <section class="section applications-section" id="applications">
       <div class="section-heading reveal">
-        <div><span class="section-index">10</span><p class="kicker">Potential applications</p></div>
+        <div><span class="section-index">08</span><p class="kicker">Potential applications</p></div>
         <h2>A staged validation path from experimental platforms to space transport.</h2>
         <p>These are candidate application domains rather than demonstrated services. Each would require a dedicated configuration, safety case and validation campaign.</p>
       </div>
@@ -297,7 +255,7 @@
 
     <section class="section ip-section" id="ip">
       <div class="section-heading reveal">
-        <div><span class="section-index">11</span><p class="kicker">Intellectual property</p></div>
+        <div><span class="section-index">09</span><p class="kicker">Intellectual property</p></div>
         <h2>Four Spanish utility-model applications are under examination.</h2>
         <p>The portfolio addresses specific implementations and subsystems. A filed application does not constitute grant, technical validation or confirmation of freedom to operate.</p>
       </div>
@@ -316,9 +274,9 @@
 
     <section class="section founder-section" id="team">
       <div class="founder-card reveal">
-        <div class="founder-monogram" aria-hidden="true">RSB</div>
+        <img class="founder-photo" src="assets/founder.jpeg" alt="Rafael Mario Sosa Brito, founder and technical director of Project COELI">
         <div>
-          <span class="section-index">12</span>
+          <span class="section-index">10</span>
           <p class="kicker">Founder / team</p>
           <h2>Rafael Mario Sosa Brito</h2>
           <p class="role">Founder · Technical Director</p>
