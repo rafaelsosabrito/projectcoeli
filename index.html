@@ -193,47 +193,44 @@
       </div>
     </section>
 
-    <section class="section simulation-section" id="simulation">
-      <div class="section-heading reveal">
-        <div>
-          <span class="section-index">05</span>
-          <p class="kicker">Simulation</p>
-        </div>
+	<section class="section tracking-section simulation-section" id="simulation">
 
-        <h2>Simulation supports the experimental programme and the exploration of scaling scenarios.</h2>
+	  <div class="tracking-copy reveal">
+		<span class="section-index">05</span>
+		<p class="kicker">Simulation</p>
 
-        <div>
-          <p>A three-dimensional rigid-body model was developed to study the motion of the receiver under repeated impacts and to explore how the architecture behaves as its parameters change. The model represents gravity, translation and rotation of the receiver, off-centre impacts and the resulting torques, centre-of-gravity placement, restitution, tangential friction, projectile dispersion, atmospheric effects, approximate collisions, adaptive timing and candidate stabilization strategies including gyroscopic stabilization.</p>
+		<h2>Simulation supports the exploration of scaling before larger experiments are built.</h2>
 
-          <p>The simulator has been used to interpret the observed dynamics of the experimental receiver, compare stabilization strategies and identify the parameters that become increasingly important as the system scales. Quantitative correlation with future experiments will require measured distributions of stream dispersion, impact geometry and restitution, receiver vibration and deformation, thermal behaviour and wear, together with progressively more realistic representations of wind, yaw, ablation and fragmentation.</p>
+		<p>A three-dimensional model is used to study the receiver under repeated impacts, including translation, rotation, stability, off-centre impacts, dispersion and different stabilization strategies.</p>
 
-          <p>One longitudinal study examined a 27 kg system with a 1 m receiver, 20 g masses, a 100 Hz source cadence, a 2 km/s launch-speed ceiling and a 150 m/s relative-impact limit. Under the aerodynamic assumptions used in that study, the model produced an apogee of 34.28 km for one reference case and 79.65 km for an optimized case, showing the strong influence of aerodynamic performance once receiver stability is maintained.</p>
-        </div>
-      </div>
+		<p>A second longitudinal model adds a stratified atmosphere, aerodynamic drag and adaptive source-to-receiver timing. Earlier sensitivity cases produced calculated apogees of approximately 34 km and 80 km under different aerodynamic assumptions.</p>
 
-      <figure class="wide-figure reveal">
-        <a class="image-link" href="assets/simulation.png" target="_blank" rel="noopener" aria-label="Open the complete three-dimensional simulation image">
-          <img src="assets/simulation.png" alt="Project COELI three-dimensional rigid-body simulation of the receiver under repeated momentum-transfer impacts" width="1650" height="1050">
-        </a>
+		<p>More recent calculations focused on receiver Δv. With a 20 kg receiver, 100 Hz operation and a 3 km/s projectile-source limit, the calculated receiver velocity reached approximately 2 km/s. A deliberately poor-aerodynamics 200 kg receiver still reached about 1.9 km/s, suggesting that much of the acceleration could occur only after reaching the thinner upper atmosphere.</p>
 
-        <figcaption>
-          <span>3D rigid-body simulator</span>
-          <span>Translation · rotation · impacts · dispersion · stabilization</span>
-        </figcaption>
-      </figure>
+		<p>The simulation also explores the possible transitional-channel effect produced by successive projectiles. This remains an experimental hypothesis and is not assumed as an aerodynamic benefit in the current launch calculations.</p>
+	  </div>
 
-      <div class="simulation-narrative reveal">
-        <p class="kicker">Transitional channel</p>
+	  <div class="tracking-visual reveal">
+		<a class="image-link"
+		   href="assets/simulation.png"
+		   target="_blank"
+		   rel="noopener"
+		   aria-label="Open the complete Project COELI simulation image">
 
-        <h3>The model has also been used to explore interaction between successive masses in the atmosphere.</h3>
+		  <img
+			src="assets/simulation.png"
+			alt="Project COELI simulation of receiver motion under repeated momentum-transfer impacts"
+			width="1650"
+			height="1050">
+		</a>
 
-        <p>One hypothesis considered by COELI is that preceding masses may temporarily modify the surrounding flow and influence the trajectory of those that follow. A reduced model was therefore used to explore whether such a transitional channel could produce a lateral concentrating effect on subsequent masses. The study considered a stream operating at 200 m/s and 100 Hz and examined different assumptions for the persistence and decay of the disturbed flow.</p>
+		<div class="tracking-legend">
+		  <span>3D simulation</span>
+		  <span>Dynamics · stability · scaling</span>
+		</div>
+	  </div>
 
-        <p>At a distance of 500 m, the three assumed decay laws produced reductions in standard dispersion of 60.00%, 14.47% and 3.11% respectively. These results describe the behaviour of the reduced model under its assumed normalization and are intended to define an experimentally testable regime. The magnitude and persistence of the effect must ultimately be determined experimentally through measurements of projectile trains, deliberately offset pairs, dispersion, velocity loss and wake evolution.</p>
-
-        <p>Important modelling note. Previous experimental studies on aerodynamic interaction between successive bodies have primarily examined how the wake generated by a leading body can reduce the axial drag experienced by a following body. The present simulation explores a different and considerably less established hypothesis: whether the transient aerodynamic disturbance generated by preceding masses could also produce a lateral restoring effect, tending to reduce deviations from the statistical stream axis. This effect has not, to our knowledge, been experimentally demonstrated for a long, high-cadence mass stream. The model therefore represents a first-order exploratory approximation based on assumed decay laws rather than a validated prediction. Its purpose is to quantify the possible magnitude of the effect and determine whether dedicated experiments are justified.</p>
-      </div>
-    </section>
+	</section>
 
     <section class="section applications-section" id="history">
       <div class="section-heading reveal">
@@ -410,11 +407,12 @@
       <div class="section-heading reveal">
         <div><span class="section-index">09</span><p class="kicker">Potential applications</p></div>
         <h2>A staged validation path from experimental platforms to space transport.</h2>
-        <p>These are candidate application domains rather than demonstrated services. Each would require a dedicated configuration, safety case and validation campaign.</p>
       </div>
+
       <div class="application-roadmap reveal">
         <article><span>Near term</span><h3>Experimental momentum-transfer platforms</h3><p>Instrumented studies of repeated impact, catcher response, external force delivery and high-cadence mass acceleration.</p></article>
         <article><span>Early application</span><h3>Upper-atmosphere access & sampling</h3><p>Potential controlled access to the 50–90 km region for compact instruments, contingent on aerodynamic, safety and recovery validation.</p></article>
+        <article><span>Early application</span><h3>Geometry-flexible spacecraft launch</h3><p>By keeping a broad or unconventional vehicle relatively slow through the dense atmosphere and providing most of its acceleration at higher altitude, COELI could reduce the need for the narrow, highly aerodynamic geometry imposed on conventional launch vehicles. This could simplify the launch of wide-body platforms, large receivers, rotating artificial-gravity structures or spacecraft designed primarily for operation in space rather than atmospheric flight.</p></article>
         <article><span>Development path</span><h3>Launch assistance</h3><p>External momentum transfer could supplement established launch architectures before independent orbital capability is considered.</p></article>
         <article><span>Longer term</span><h3>Orbital and in-space transport</h3><p>Proposed infrastructure for progressive momentum delivery to receivers operating in orbital or interplanetary environments.</p></article>
         <article><span>Long horizon</span><h3>Solar System applications</h3><p>Potential transport architectures within the Solar System, considered only after terrestrial, atmospheric and orbital scaling have been demonstrated.</p></article>
